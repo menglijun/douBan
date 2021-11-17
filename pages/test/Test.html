@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 20px;
+            display: flex;
+            /*主轴方向*/
+            flex-direction: row;
+            /*决定item是单行还是多行*/
+            flex-wrap: nowrap;
+            /*等价于flex-direction || flex-wrap 且部分顺序*/
+            /*flex-flow: wrap column;*/
+            /*交叉轴对齐方式 stretch: 当item在交叉轴方向上的size为auto时,将高度设为match-parent*/
+            align-items: start;
+            /*主轴对齐方式*/
+            justify-content: start;
+            /*多行item在交叉轴上的对齐方式*/
+            /*align-content: space-evenly;*/
+
+        }
+        .item{
+            /*flex-basis flex-grow? || flex-shrink
+            none = 0 0 auto*/
+            /*flex: 0 1 auto;*/
+            /*主轴方向的宽度或者高度 优先级高于width， 低于max和min*/
+            /*flex-basis: 0;*/
+            /*flex-grow: 1;*/
+            width: 100px;
+            height: 100px;
+            color: aliceblue;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item:nth-of-type(1){
+            min-width: 50px;
+            max-width: 150px;
+            background-color: blueviolet;
+            /*交叉轴方向对齐方式，可覆盖父类设置的交叉轴对齐方式align-items*/
+            /*align-self: start;*/
+            /*沿主轴方向的扩展比例 总和<=1，直接用剩余空*比例数，否则按比例分配*/
+            /*flex-grow: 1;*/
+            /*沿主轴方向的收缩比例 默认值为1
+            收缩比例 = flex-shrink * 基本size（此item为100）
+            (总收缩size*收缩比例)/收缩比例总和*/
+            flex-shrink: 2;
+        }
+        .item:nth-of-type(2){
+            background-color: aqua;
+            /*排列順序 从小到大， 默认为0*/
+            /*order: 1;*/
+            flex-shrink: 2;
+        }
+        .item:nth-of-type(3){
+            background-color: red;
+            /*align-self: end;*/
+        }
+        .item:nth-of-type(4){
+            background-color: greenyellow;
+            /*order: -1;*/
+        }
+        .item:nth-of-type(5){
+            background-color: blueviolet;
+        }
+        .item:nth-of-type(6){
+            background-color: aqua;
+        }
+        .item:nth-of-type(7){
+            background-color: red;
+        }
+        .item:nth-of-type(8){
+            background-color: greenyellow;
+        }
+        .item:nth-of-type(9){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <!--<div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>-->
+    </div>
+<script>
+    // console.log(1);
+</script>
+</body>
+</html>
