@@ -1,4 +1,8 @@
 <!--pages/mine/mine.wxml-->
-<view>
+<view class="container">
+    <view class="login-wrapper">
+        <view class="login">登陆</view>
+        <image class="login-img" src="../../assets/imgs/bg_mine_login.png" mode="aspectFill"></image>
+    </view>
     <view class="version">版本10.3.9</view>
 </view>
