@@ -5,4 +5,36 @@
         <image class="login-img" src="../../assets/imgs/bg_mine_login.png" mode="aspectFill"></image>
     </view>
     <view class="version">版本10.3.9</view>
+
+    <view class="list-container">
+        <view class="my-book-container">
+            <view class="my-book">我的图书影音</view>
+            <view class="login-look">
+                登陆查看
+                <view class="arrow"></view>
+            </view>
+        </view>
+        <!--wx:for="{{数组}}" wx:for-item="item定义每个item项数据名字" wx:for-item="index定义的下标属性名称"-->
+        <!--<block></block>标签上加for， 便利的是block内部的标签-->
+        <view class="item" wx:for="{{items}}" wx:key="unique">
+            <image class="icon" src="../../assets/imgs/{{item.icon}}"></image>
+            <view class="item-content" >
+                <view class="item-info">
+                    <view class="item-left">
+                        <view>{{item.title}}</view>
+                        <view class="look-num">
+                            <view class="item-num">{{item.num}}</view>
+                            <view class="item-state">{{item.state}}</view>
+                        </view>
+                    </view>
+                    <view class="item-right">
+                        <text class="text">{{item.mark}}</text>
+                        <view data-index="{{index}}" id="item-{{index}}" class="item-open" bind:tap="begin">立即开启</view>
+                        <view class="arrow"></view>
+                    </view>
+                </view>
+                <view class="item-line"></view>
+            </view>
+        </view>
+    </view>
 </view>

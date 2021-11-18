@@ -5,7 +5,29 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        items: [
+            {
+                icon: "ic_cat_movie.png",
+                title: "观影分析",
+                num: 5,
+                state: "看过",
+                mark: "标记10部影片\n开启观影分析"
+            },
+            {
+                icon: "ic_cat_book.png",
+                title: "读书分析",
+                num: 6,
+                state: "读过",
+                mark: "标记10本书\n开启读书分析"
+            },
+            {
+                icon: "ic_cat_music.png",
+                title: "音乐分析",
+                num: 9,
+                state: "听过",
+                mark: "标记10张唱片\n开启音乐分析"
+            }
+        ]
     },
 
     /**
@@ -62,5 +84,18 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    begin:function (event) {
+        event.currentTarget.id
+        const index = event.currentTarget.dataset.index
+        if (index == 0){
+            console.log('位置1 = '+index)
+        }else if (index == 1){
+            console.log('位置2 = '+index)
+        }else if (index == 2){
+            console.log('位置3 = '+index)
+        }
+
+        console.log(event)
     }
 })

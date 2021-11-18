@@ -1,0 +1,8 @@
+<!--pages/pro/procates.wxml-->
+<view class="container">
+    <view class="login-container">
+        <view class="login">登陆</view>
+        <image class="login-image" src="../../assets/imgs/bg_mine_login.png" mode="aspectFill"></image>
+    </view>
+    <view class="version">版本1.0.19</view>
+</view>
