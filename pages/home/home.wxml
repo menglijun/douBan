@@ -1,2 +1,12 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="container">
+    <view class="header">
+        <view class="search-warpper">
+            <image class="search-icon" src="../../assets/imgs/ic_search.png"></image>
+            搜索
+        </view>
+    </view>
+    <view class="content">
+
+    </view>
+</view>

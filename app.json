@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/mine/mine",
     "pages/pro/procates",
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/home",
     "pages/agreement/agreement"
   ],
   "window": {
