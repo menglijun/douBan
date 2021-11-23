@@ -17,3 +17,76 @@
     height: 40rpx;
     margin-right: 10rpx;
 }
+.row-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-title{
+    color: #333;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-left: 30rpx;
+}
+.row-more{
+    color: #39B742;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30rpx 30rpx;
+}
+.arrow{
+    width: 10rpx;
+    height: 10rpx;
+    margin-left: 5rpx;
+    border-right: 4rpx solid #39B742;
+    border-bottom: 4rpx solid #39B742;
+    transform: rotate(-45deg);
+}
+.items{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*margin-left: 15rpx;*/
+    /*设置是否可以滚动 scroll或者auto但会有滚动条*/
+    /*overflow-x: auto;*/
+    /*nowrap：不换行*/
+    white-space: nowrap;
+}
+.items .item{
+    width: 210rpx;
+    /* inline-block：将块级元素设为行内元素 inline-flex: 是行内的flex容器*/
+    display: inline-flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: start;*/
+    margin-left: 30rpx;
+    /*margin-right: 15rpx;*/
+}
+.items .item:last-of-type{
+    margin-right: 30rpx;
+}
+.item-img{
+    width: 210rpx;
+    height: 301rpx;
+}
+.item-title{
+    font-weight: bold;
+    font-size: 30rpx;
+    text-align: center;
+    /*溢出自动隐藏*/
+    overflow: hidden;
+    /*超出显示省略号*/
+    text-overflow: ellipsis;
+}
+.item-state{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.star-wrapper{
+}
+.star-wrapper .star{
+    width: 30rpx;
+    height: 30rpx;
+}

@@ -82,12 +82,12 @@ page{
     align-items: center;
 }
 /*找到最后一个item的下划线，设置隐藏属性*/
-.item:last-of-type .item-line{
+/*.item:last-of-type .item-line{*/
     /*效果雷同invisible*/
     /*visibility: hidden;*/
     /*不存在雷同gone*/
     /*display: none;*/
-}
+/*}*/
 .item .icon{
     width: 100rpx;
     height: 100rpx;
@@ -106,8 +106,8 @@ page{
     align-items: center;
     justify-content: space-between;
 }
-.item .item-left{
-}
+/*.item .item-left{*/
+/*}*/
 .item-left .look-num{
     margin-top: 20rpx;
     display: flex;

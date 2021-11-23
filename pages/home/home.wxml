@@ -7,6 +7,28 @@
         </view>
     </view>
     <view class="content">
-
+        <view class="content-row">
+            <view class="row-wrapper">
+                <view class="row-title">影院热映</view>
+                <view class="row-more">
+                    <view>查看更多</view>
+                    <view class="arrow"></view>
+                </view>
+            </view>
+            <scroll-view class="items" scroll-x="true">
+                <view wx:for="{{goods}}" class="item" wx:key="unique" wx:for-item="good">
+<!--                    <image class="item-img" src="../../assets/imgs/ic_launcher.png"></image>-->
+<!--                    <image class="item-img" src="https://image.yanwei365.com/31/20211119/0dc60d6f9d4d43f09ca3b8a5a132403d/107518336.jpg-m"></image>-->
+                    <image class="item-img" src="{{good.mainImagePath}}"></image>
+                    <view class="item-title">{{good.title}}</view>
+                    <view class="item-state">
+                        <view class="star-wrapper" wx:for="{{5}}">
+                            <image class="star" src="../../assets/imgs/rating_star_small_on.png"></image>
+                        </view>
+                        <view class="points">7.0</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
     </view>
 </view>
